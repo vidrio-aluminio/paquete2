@@ -1,0 +1,886 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+@font-face {
+  font-family: Fuente;
+  src: url(../fonts/tt1212m_.ttf);
+}
+@font-face {
+  font-family: Carnales;
+  src: url(../fonts/Rumble\ Brave.otf);
+}
+@keyframes movimientologo {
+  0% {
+    transform: translateY(-10px);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  75% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes cotizaColor {
+  0% {
+    background: rgb(45, 80, 250);
+  }
+  50% {
+    background: rgb(255, 0, 155);
+  }
+  100% {
+    background: rgb(45, 80, 250);
+  }
+}
+@keyframes shadowImg {
+  0% {
+    box-shadow: 2px 4px 10px rgb(45, 80, 250);
+  }
+  50% {
+    box-shadow: 2px 4px 10px rgb(255, 0, 155);
+  }
+  100% {
+    box-shadow: 2px 4px 10px rgb(45, 80, 250);
+  }
+}
+header {
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  min-height: 75px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 20px rgba(35, 157, 215, 0.75);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.575);
+}
+header .logo_empresa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-decoration: none;
+}
+header .logo_empresa img {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  transition: 0.3s ease-in-out;
+}
+header .logo_empresa img:hover {
+  transform: translateY(-3px);
+}
+header .logo_empresa .nombre_empresa {
+  font-size: 20px;
+  margin-left: 0px;
+  font-family: "Bruno Ace";
+  text-decoration: none;
+  color: white;
+  text-shadow: 0 0 10px white;
+}
+header .logo_empresa .nombre_empresa:hover {
+  text-shadow: 0 0 10px rgb(45, 80, 250);
+  color: rgb(45, 80, 250);
+  transition: 0.5s;
+}
+header .menutoogle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 30px;
+  width: 30px;
+  visibility: hidden;
+}
+header .menutoogle ion-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+}
+header .menu {
+  position: relative;
+  color: white;
+  font-family: Fuente;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  margin-right: 20px;
+}
+header .menu a {
+  text-decoration: none;
+  list-style-type: none;
+}
+header .menu a li {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px white;
+  font-family: "Bruno Ace";
+}
+header .menu a li:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  text-shadow: 0 0 10px rgb(45, 80, 250);
+  color: rgb(45, 80, 250);
+}
+
+.conteiner1 {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+  background-image: url(../imagenes/fondo_principal.jpg);
+  background-size: cover;
+  box-shadow: 5px 5px 15px black;
+}
+.conteiner1 .contacto {
+  height: 475px;
+  width: 475px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 5px 5px 10px rgb(255, 255, 255), -5px -5px 10px rgb(255, 0, 155);
+  background: rgba(255, 255, 255, 0.438);
+  gap: 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  animation: 5s movimientologo linear infinite;
+}
+.conteiner1 .contacto img {
+  height: 100px;
+  transition: 0.3s ease-in-out;
+}
+.conteiner1 .contacto .titulo {
+  color: rgb(0, 0, 0);
+  font-family: Fuente;
+  font-size: 30px;
+  transition: 0.3s ease-in-out;
+}
+.conteiner1 .contacto .eslogan {
+  color: rgb(0, 0, 0);
+  font-family: "Yellowtail", cursive;
+  font-size: 23px;
+  margin-top: -20px;
+  font-size: 300;
+  letter-spacing: 1px;
+}
+.conteiner1 .contacto .propietario {
+  color: rgb(0, 0, 0);
+  font-size: 26px;
+  font-family: "Bruno Ace";
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+  border-bottom: 2px solid rgb(45, 80, 250);
+}
+.conteiner1 .contacto .datoscontacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -5px;
+  gap: 10px;
+}
+.conteiner1 .contacto .datoscontacto a {
+  text-decoration: none;
+  list-style-type: none;
+}
+.conteiner1 .contacto .datoscontacto a ion-icon {
+  font-size: 28px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(45, 80, 250);
+  padding: 7px;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+}
+.conteiner1 .contacto .datoscontacto a span {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-family: "Bruno Ace";
+  transition: 0.3s ease-in-out;
+}
+.conteiner1 .contacto:hover {
+  transform: scale(0.95);
+}
+
+.scene .nosotros {
+  position: relative;
+  width: 100%;
+  padding: 0px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 50px;
+  z-index: 100;
+}
+.scene .nosotros .quienes_somos {
+  font-size: 28px;
+  font-weight: 400;
+  font-family: "Bruno Ace";
+}
+.scene .nosotros .somos {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+
+.cotiza_ahora {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 25px;
+  gap: 10px;
+  transition: 0.3s ease-in-out;
+}
+.cotiza_ahora a {
+  text-decoration: none;
+}
+.cotiza_ahora a div {
+  position: relative;
+  background: black;
+  padding: 17px 80px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 5px 5px 15px black;
+  animation: 7s cotizaColor linear infinite;
+}
+.cotiza_ahora a div span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+.cotiza_ahora a div:hover {
+  background-color: rgba(0, 0, 0, 0.884);
+}
+.cotiza_ahora img {
+  width: 125px;
+  rotate: 10deg;
+}
+.cotiza_ahora:hover {
+  transform: translateY(-3px);
+}
+
+.servicios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 60px;
+  gap: 10px;
+}
+.servicios .textos {
+  position: relative;
+  background-image: url(../imagenes/fondo_principal.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 500px;
+  width: 40%;
+  gap: 50px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 5px 5px 25px rgb(0, 0, 0);
+}
+.servicios .textos span {
+  margin-top: 50px;
+  color: rgb(0, 0, 0);
+  font-family: "Bruno Ace";
+  font-size: 30px;
+  font-weight: 500;
+  z-index: 1000;
+  transition: 0.3s ease-in-out;
+  border-bottom: 3px solid rgb(255, 255, 255);
+}
+.servicios .textos span:hover {
+  transform: scale(1.1);
+  color: rgb(255, 255, 255);
+}
+.servicios .textos ul {
+  list-style-type: none;
+  color: white;
+  z-index: 1000;
+  text-align: center;
+}
+.servicios .textos ul li {
+  font-family: Fuente;
+  font-size: 30px;
+  margin-top: 7px;
+  transition: 0.3s ease-in-out;
+}
+.servicios .textos ul li:hover {
+  transform: scale(1.1);
+  color: var(--clr);
+}
+.servicios .textos::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 105%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.servicios .image2 {
+  height: 500px;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 0.3s;
+  position: relative;
+}
+.servicios .image2 img {
+  border-radius: 20px;
+  height: 100%;
+  transition: 0.3s;
+  animation: 7s shadowImg linear infinite;
+  transition: 0.3s ease-in-out;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+
+.contacto2 {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.contacto2 .contenedor {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background: rgb(0, 0, 0);
+  box-shadow: 2px 2px 10px rgb(255, 0, 155), -2px -2px 10px rgb(45, 80, 250);
+  height: 340px;
+  width: 50px;
+  transition: 0.5s;
+  border-radius: 30px;
+}
+.contacto2 .contenedor.active {
+  transition: 0.5s;
+  height: 130px;
+  width: 50px;
+}
+.contacto2 .contenedor.active2 {
+  transition: 0.5s;
+  flex-direction: row;
+  width: 320px;
+  justify-content: center;
+  gap: 50px;
+}
+.contacto2 .contenedor .qr2 img {
+  transition: 0.5s;
+  width: 0px;
+  visibility: hidden;
+  opacity: 0;
+}
+.contacto2 .contenedor .qr2.active2 img {
+  transition: 0.5s;
+  width: 200px;
+  visibility: visible;
+  opacity: 1;
+}
+.contacto2 .contenedor .botones {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: -10px;
+  gap: 28px;
+}
+.contacto2 .contenedor .botones a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.contacto2 .contenedor .botones a span {
+  color: white;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  transform: rotate(0deg);
+}
+.contacto2 .contenedor .botones .btn {
+  position: relative;
+  font-size: 25px;
+  color: white;
+  transition: 0.5s;
+}
+.contacto2 .contenedor .botones .btn:hover {
+  color: rgb(45, 80, 250);
+  transform: translateY(-3px);
+}
+.contacto2 .contenedor .botones.active {
+  transition: 0.5s;
+}
+.contacto2 .contenedor .botones.active :nth-child(3) {
+  opacity: 0;
+  visibility: hidden;
+}
+.contacto2 .contenedor .botones.active :nth-child(4) {
+  opacity: 0;
+  visibility: hidden;
+}
+.contacto2 .contenedor .botones.active :nth-child(5) {
+  opacity: 0;
+  visibility: hidden;
+}
+.contacto2 .contenedor .botones.active :nth-child(6) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.contacto_footer {
+  position: relative;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 400px;
+  width: 100%;
+}
+.contacto_footer .preferencia {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  gap: 20px;
+  padding: 25px;
+}
+.contacto_footer .preferencia .gracias {
+  color: rgb(255, 255, 255);
+  border-bottom: 2px solid rgb(255, 255, 255);
+  text-shadow: 0 0 10px white;
+  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding-bottom: 1px;
+  letter-spacing: 1px;
+}
+.contacto_footer .preferencia .gracias:hover {
+  color: rgb(45, 80, 250);
+  text-shadow: 0 0 10px rgb(45, 80, 250);
+}
+.contacto_footer .preferencia span {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+.contacto_footer .preferencia .cotiza_ahora2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+  gap: 10px;
+  transition: 0.3s ease-in-out;
+}
+.contacto_footer .preferencia .cotiza_ahora2 a {
+  text-decoration: none;
+}
+.contacto_footer .preferencia .cotiza_ahora2 a div {
+  position: relative;
+  animation: 7s cotizaColor linear infinite;
+  padding: 10px 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+.contacto_footer .preferencia .cotiza_ahora2 a div span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.contacto_footer .preferencia .cotiza_ahora2 a div:hover {
+  background-color: rgba(0, 0, 0, 0.884);
+}
+.contacto_footer .preferencia .cotiza_ahora2 img {
+  width: 125px;
+  rotate: 10deg;
+}
+.contacto_footer .preferencia .cotiza_ahora2:hover {
+  transform: translateY(-3px);
+}
+.contacto_footer .preferencia .datoscontacto2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+.contacto_footer .preferencia .datoscontacto2 ion-icon {
+  font-size: 28px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  padding: 7px;
+  border-radius: 50%;
+  border: 1px solid rgb(255, 255, 255);
+  transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.contacto_footer .preferencia .datoscontacto2 ion-icon:hover {
+  transform: translateY(-3px);
+  color: rgb(45, 80, 250);
+  background-color: rgb(255, 255, 255);
+}
+.contacto_footer .preferencia .datoscontacto2 span {
+  color: white;
+  font-size: 25px;
+  font-family: "Montserrat";
+}
+.contacto_footer .preferencia .credito {
+  color: white;
+  font-size: 13px;
+  font-family: "Montserrat";
+}
+.contacto_footer .ubicacion {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  gap: 10px;
+}
+.contacto_footer .ubicacion iframe {
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px rgb(255, 255, 255);
+  border: 1px solid white;
+  width: 550px;
+  height: 300px;
+}
+.contacto_footer .ubicacion a {
+  list-style-type: none;
+  text-decoration: none;
+}
+.contacto_footer .ubicacion a span {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-family: "Montserrat";
+}
+
+@media screen and (max-width: 960px) {
+  header {
+    min-height: 75px;
+  }
+  header .logo_empresa .nombre_empresa {
+    font-size: 19px;
+    letter-spacing: 0px;
+  }
+  header .menu {
+    gap: 15px;
+  }
+  header .menu a li {
+    font-size: 17px;
+  }
+  .conteiner1 {
+    height: 425px;
+  }
+  .conteiner1 .contacto {
+    height: 350px;
+    width: 350px;
+  }
+  .conteiner1 .contacto img {
+    height: 90px;
+  }
+  .conteiner1 .contacto .titulo {
+    font-size: 25px;
+  }
+  .conteiner1 .contacto .eslogan {
+    font-size: 18px;
+  }
+  .conteiner1 .contacto .propietario {
+    font-size: 20px;
+  }
+  .conteiner1 .contacto .datoscontacto {
+    gap: 5px;
+  }
+  .conteiner1 .contacto .datoscontacto a ion-icon {
+    font-size: 25px;
+  }
+  .conteiner1 .contacto .datoscontacto a span {
+    font-size: 22px;
+  }
+  .scene .nosotros {
+    padding: 0px 75px;
+  }
+  .servicios {
+    gap: 50px;
+  }
+  .servicios .textos {
+    height: 300px;
+    width: 45%;
+    gap: 10px;
+    box-shadow: 3px 3px 15px rgb(13, 45, 66);
+  }
+  .servicios .textos span {
+    font-size: 18px;
+  }
+  .servicios .textos ul li {
+    font-size: 17px;
+  }
+  .servicios .image2 {
+    height: 300px;
+    width: 35%;
+  }
+  .servicios .image2 img {
+    width: 100%;
+    box-shadow: 3px 3px 15px rgb(13, 45, 66);
+    transition: 0.3s ease-in-out;
+  }
+  .contacto_footer {
+    height: 450px;
+  }
+  .contacto_footer .ubicacion {
+    margin-right: 20px;
+  }
+  .contacto_footer .ubicacion iframe {
+    width: 300px;
+    height: 375px;
+  }
+  .contacto_footer .ubicacion a span {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 480px) {
+  header {
+    min-height: 150px;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  header .logo_empresa {
+    flex-direction: column;
+    gap: 10px;
+  }
+  header .logo_empresa .nombre_empresa {
+    font-size: 25px;
+    margin-top: -5px;
+  }
+  header .menutoogle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    visibility: visible;
+    transition: 0.5s;
+  }
+  header .menutoogle.active {
+    transition: 0.5s;
+    top: 0;
+    right: 0;
+    height: 25vh;
+    width: 100vw;
+    background-color: rgb(0, 0, 0);
+    z-index: 1000;
+    border-bottom: 1px solid white;
+  }
+  header .menutoogle ion-icon {
+    transition: 0.5s;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+  }
+  header .menutoogle ion-icon.active {
+    transition: 0.5s;
+    top: 10px;
+    right: 10px;
+  }
+  header .menu {
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+  }
+  header .menu a li {
+    font-size: 16px;
+  }
+  header .menu.active {
+    transition: 0.5s;
+    opacity: 1;
+    flex-direction: column;
+    visibility: visible;
+    z-index: 1000;
+    gap: 30px;
+    margin-top: -80px;
+    margin-left: 20px;
+  }
+  header .menu.active a li {
+    font-size: 20px;
+  }
+  header .menu.active a:nth-child(2) {
+    border-top: 1px solid rgb(255, 255, 255);
+    padding: 10px 50px;
+    margin-top: -15px;
+  }
+  header .menu.active a:nth-child(3) {
+    border-top: 1px solid rgb(255, 255, 255);
+    padding: 10px 58px;
+    margin-top: -20px;
+  }
+  .conteiner1 {
+    height: 600px;
+  }
+  .conteiner1 .contacto {
+    height: 350px;
+    width: 350px;
+  }
+  .conteiner1 .contacto img {
+    height: 70px;
+  }
+  .conteiner1 .contacto .titulo {
+    font-size: 22px;
+  }
+  .conteiner1 .contacto .eslogan {
+    font-size: 16px;
+  }
+  .conteiner1 .contacto .propietario {
+    font-size: 22px;
+  }
+  .conteiner1 .contacto .datoscontacto {
+    gap: 5px;
+  }
+  .conteiner1 .contacto .datoscontacto a ion-icon {
+    font-size: 24px;
+  }
+  .conteiner1 .contacto .datoscontacto a span {
+    font-size: 18px;
+  }
+  .scene .nosotros {
+    padding: 0px 20px;
+  }
+  .scene .nosotros .quienes_somos {
+    font-size: 24px;
+  }
+  .scene .nosotros .somos {
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 28px;
+  }
+  .cotiza_ahora a div {
+    padding: 15px 70px;
+  }
+  .cotiza_ahora a div span {
+    font-size: 16px;
+  }
+  .servicios {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .servicios .textos {
+    height: 275px;
+    width: 95%;
+    gap: 5px;
+    box-shadow: 3px 3px 15px rgb(0, 0, 0);
+  }
+  .servicios .textos span {
+    margin-top: 20px;
+    font-size: 21px;
+    border-bottom: 2px solid white;
+  }
+  .servicios .textos ul li {
+    font-size: 17px;
+    margin-top: 7px;
+  }
+  .servicios .image2 {
+    height: 425px;
+    width: 95%;
+  }
+  .contacto2 .contenedor.active2 {
+    width: 385px;
+  }
+  .contacto_footer {
+    justify-content: center;
+    flex-direction: column;
+    height: 1000px;
+    width: 100%;
+    margin-top: -10px;
+    gap: 0px;
+  }
+  .contacto_footer .preferencia {
+    flex-direction: column;
+    width: 100%;
+  }
+  .contacto_footer .preferencia .gracias {
+    font-size: 32px;
+  }
+  .contacto_footer .preferencia span {
+    font-size: 17px;
+  }
+  .contacto_footer .preferencia .cotiza_ahora2 a div {
+    padding: 10px 60px;
+  }
+  .contacto_footer .preferencia .datoscontacto2 ion-icon {
+    font-size: 32px;
+  }
+  .contacto_footer .preferencia .credito {
+    font-size: 17px;
+  }
+  .contacto_footer .ubicacion {
+    width: 95%;
+    margin-right: 0;
+    margin-top: -40px;
+  }
+  .contacto_footer .ubicacion iframe {
+    width: 100%;
+    height: 400px;
+  }
+  .contacto_footer .ubicacion a span {
+    font-size: 11px;
+  }
+}/*# sourceMappingURL=style.css.map */
